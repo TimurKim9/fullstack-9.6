@@ -1,0 +1,87 @@
+@use 'vary.scss' as *;
+
+header {
+    display: flex;
+    background-color: #FFFFFF;
+    margin: 0;
+    gap:16px;
+}
+
+.header__menu-btn,
+.header__phone-btn,
+.header__messenger-btn,
+.header__profile-btn,
+.header__settings-btn,
+.header__status-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+
+.header__menu-btn img,
+.header__phone-btn img,
+.header__messenger-btn img,
+.header__profile-btn img,
+.header__settings-btn img,
+.header__status-btn img {
+    display: block;
+    width: 40px;
+    height: auto;
+}
+
+.header__menu-btn{
+    margin-left: 15px;
+}
+
+.header__logo {
+    width: 96.55px;
+    height: auto;
+}
+
+.header__box {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 16px;
+    gap: 16px;
+}
+
+.page-title {
+    display: flex;
+    flex-direction: row;
+}
+
+.page-title__actions{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: auto;
+}
+
+.page-title__apply,
+.page-title__status{
+    font-family: 'TT Lakes';
+    font-weight: 500;
+    font-style: normal;
+    display: flex;
+}
+
+.page-title__settings-btn,
+.page-title__status-btn {
+    background: none;
+    border: none;            
+    cursor: pointer;
+    margin-right: 10px;
+}
+h1{
+    font-family: 'TT Lakes';
+    font-weight: 700;
+    font-style: normal;
+    color: #1B1C21;
+    height: 40px;
+    border-left: 4px solid $green-decor;
+    padding-left: 20px ;
+    
+}

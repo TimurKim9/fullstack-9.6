@@ -2,7 +2,7 @@ import '../scss/style.scss'
 
 console.log('It works!')
 
-const buttons = document.querySelectorAll('.services-btn button');
+const buttons = document.querySelectorAll('.side-menu__list');
 
 buttons.forEach(button => {
   button.addEventListener('click', () => {
