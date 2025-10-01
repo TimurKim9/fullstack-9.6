@@ -10,55 +10,61 @@
     <title>fullstack 9.6</title>
   </head>
   <body>
-     <header>
-      <button class="menu-btn"> <img src="img/burger.svg" alt="menyushka"> </button>
-      <div class="v-line1"></div>
-      <div class="logo"> <img src="img/Group.svg" alt="logo"> </div>
-      <div class="header-box">
-        <button class="phone-btn"> <img src="img/call.svg" alt="mobila"> </button>
-        <button class="messenger-btn"> <img src="img/chat.svg" alt="smska"> </button>
-        <button class="profile-btn"> <img src="img/profile.svg" alt="chelik"> </button>
-        <div class="v-line2"></div>
-        <button class="settings-btn"> <img src="img/repair.svg" alt="istrumenty"> </button>
-        <button class="status-btn"> <img src="img/checkstatus.svg" alt="lupa"> </button>
+     <header class="header">
+      <button class="header__menu-btn"> <img src="img/burger.svg" alt="менюшка"> </button>
+      <div class="header__v-line header__v-line--left"></div>
+      <div class="header__logo"> <img src="img/Group.svg" alt="logo"> </div>
+
+      <div class="header__box">
+        <button class="header__phone-btn"> <img src="img/call.svg" alt="mobila"> </button>
+        <button class="header__messenger-btn"> <img src="img/chat.svg" alt="smska"> </button>
+        <button class="header__profile-btn"> <img src="img/profile.svg" alt="chelik"> </button>
+        <div class="header__v-line header__v-line--right"></div>
+        <button class="header__settings-btn"> <img src="img/repair.svg" alt="istrumenty"> </button>
+        <button class="header__status-btn"> <img src="img/checkstatus.svg" alt="lupa"> </button>
       </div>
       </header>
-      <div class="title-wrapper">
-       <h1 class="title-vertical">Услуги и сервисы</h1>
-        <div class="header-buttons">
-          <span>Оставить заявку</span>
+
+      <div class="page-title">
+       <h1 class="page-title__heading">Услуги и сервисы</h1>
+        <div class="page-title__actions">
+          <span class="page-title__apply">Оставить заявку</span>
           <button class="settings-btn2"><img src="img/repair.svg" alt="istrumenty"></button>
-          <span>Статус ремонта</span>
+          <span class="page-title__status">Статус ремонта</span>
           <button class="status-btn2"><img src="img/checkstatus.svg" alt="lupa"></button>
         </div>
       </div>
-      <div id="myMenu" class="side-menu">
-        <nav class="services">
-          <ul class="services-btn">
-            <li><button>Ремонтируемые бренды</button></li>
-            <li><button>Ремонтируемые устройства</button></li>
-            <li><button>Дополнительные услуги</button></li>
-            <li><button>Цены на услуги</button></li>
-            <li><button>Специальные цены</button></li>
-            <li><button>Адреса сервисных центров</button></li>
-            <li><button>Отзывы</button></li>
-            <div class="slide slide-start"></div>
+
+      <aside id="myMenu" class="side-menu">
+        <nav class="side-menu__nav">
+          <ul class="side-menu__list">
+            <li class="side-menu__item"><button>Ремонтируемые бренды</button></li>
+            <li class="side-menu__item"><button>Ремонтируемые устройства</button></li>
+            <li class="side-menu__item"><button>Дополнительные услуги</button></li>
+            <li class="side-menu__item"><button>Цены на услуги</button></li>
+            <li class="side-menu__item"><button>Специальные цены</button></li>
+            <li class="side-menu__item"><button>Адреса сервисных центров</button></li>
+            <li class="side-menu__item"><button>Отзывы</button></li>
+            <div class="side-menu__slide side-menu__slide--start"></div>
           </ul>
         </nav>
-        <div class="container">
-        <div class="text-container">
-            <input type="checkbox" id="toggle">
-            <div class="text" id="text">
-              <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
-              <br>
-              <p>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
+
+        <main class="content">
+          <div class="content__text-block">
+            <input type="checkbox" id="toggle" class="content__toggle">
+
+            <div class="content__text" id="text">
+              <p class="content__paragraph">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
+              <p class="content__paragraph">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
             </div>
-            <label for="toggle" class="toggle-label"> <img src="img/expand.svg" alt="strelochki"> Читать далее </label>
-        </div>
-        <div class="picture">
-          <img src="img/_MG_3223.png" alt="fotka">
-        </div>
-        </div>
-      </div>
+
+            <label for="toggle" class="content__toggle-label"> <img src="img/expand.svg" alt="strelochki"> Читать далее </label>
+          </div>
+        
+          <div class="content__picture">
+            <img src="img/_MG_3223.png" alt="fotka" class="content__img">
+          </div>
+        </main>
+      </aside>
   </body>
 </html>
