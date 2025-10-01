@@ -82,7 +82,7 @@ header .logo {
 
 span{
     font-family: 'TT Lakes';
-    font-weight: 500px;
+    font-weight: 500;
     font-style: normal;
     display: flex;
 }
@@ -110,7 +110,7 @@ span{
 }
 h1{
     font-family: 'TT Lakes';
-    font-weight: 800px;
+    font-weight: 700;
     font-style: normal;
     color: #1B1C21;
     height: 40px;
@@ -118,31 +118,39 @@ h1{
 }
 
 nav {
-  display: flex;  
+    display: flex;  
 }
 
 .services-btn {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 10px;    
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    overflow-y: auto;
+    white-space: nowrap;
+    scrollbar-width: none;    
 }
 
 .services-btn button {
-  background-color: #F8F8F8;
-  color: #7E7E82;
-  padding: 10px 15px;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s;
-  border-radius: 6px;
+    font-family:'TT Lakes';
+    font-weight: 500;  
+    background-color: #F8F8F8;
+    color: #7E7E82;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-radius: 6px;
+    width: 248px;
+    height: 40px;
+    font-size: 16px;
 }
 
 .services-btn button.active {
-  border: 2px solid #B8FFEC;
-  background-color: #FFFFFF;
-  color: #7E7E82;
+    border: 2px solid #B8FFEC;
+    background-color: #FFFFFF;
+    color: #7E7E82;
 }
 
 .text {
@@ -152,9 +160,9 @@ nav {
 }
 
 br {
-  display: block;
-  margin: 4px 0; 
-  content: "";
+    display: block;
+    margin: 4px 0; 
+    content: "";
 }
 
 #toggle {
@@ -169,8 +177,8 @@ br {
     display: flex;
     align-items: center;
     cursor: pointer;
-   font-family: 'TT Lakes';
-    font-weight: 500px;
+    font-family: 'TT Lakes';
+    font-weight: 500;
     font-style: normal;
     text-decoration: none;
     margin-top: 8px;
@@ -184,7 +192,8 @@ br {
 
 p {
     font-family: 'TT Lakes';
-    font-weight: 300;
+    font-weight: 400;
+    font-size: 14px;
     font-style: normal;
     text-decoration: none;
     color:#1B1C21 ;
@@ -294,10 +303,10 @@ p {
     h1{
         margin-right: 430px;
     }
-    .services-btn{
-        overflow: hidden;
-        flex-wrap: wrap;
-    }
+    // .services-btn{
+    //     overflow: hidden;
+    //     flex-wrap: wrap;
+    // }
     .container {
         display: flex;         
         justify-content: space-between; 
