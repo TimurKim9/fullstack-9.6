@@ -1,0 +1,54 @@
+@use 'vary.scss' as *;
+
+.content__text {
+    max-height: 8em;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+
+br {
+    display: block;
+    margin: 4px 0;
+    content: "";
+}
+
+
+.content__toggle {
+    display: none;
+}
+
+
+.content__toggle:checked ~ .content__text {
+    max-height: 99999999px;
+}
+
+
+.content__toggle-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'TT Lakes';
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    margin-top: 8px;
+    user-select: none;
+}
+
+
+.content__toggle-label img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+
+.content__paragraph {
+    font-family: 'TT Lakes';
+    font-weight: 400;
+    font-size: 14px;
+    font-style: normal;
+    text-decoration: none;
+    color:#1B1C21;
+}
