@@ -1,40 +1,40 @@
 @use 'vary.scss' as *;
 
 .side-menu__nav {
-display: flex;
+    display: flex;
 }
 
 
 .side-menu__list {
-list-style: none;
-padding: 0;
-margin: 0;
-display: flex;
-gap: 10px;
-overflow-y: auto;
-white-space: nowrap;
-scrollbar-width: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    overflow-y: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
 }
 
 
 .side-menu__btn {
-font-family:'TT Lakes';
-font-weight: 500;
-background-color: #F8F8F8;
-color: #7E7E82;
-padding: 10px 15px;
-border: 2px;
-cursor: pointer;
-transition: background 0.3s;
-border-radius: 6px;
-width: 248px;
-height: 40px;
-font-size: 16px;
+    font-family:'TT Lakes';
+    font-weight: 500;
+    background-color: #F8F8F8;
+    color: $gray-text;
+    padding: 10px 15px;
+    border: 2px;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-radius: 6px;
+    width: 248px;
+    height: 40px;
+    font-size: 16px;
 }
 
 
 .side-menu__btn.active {
-border: 2px solid #B8FFEC;
-background-color: #FFFFFF;
-color: #7E7E82;
+    border: 2px solid #B8FFEC;
+    background-color: #FFFFFF;
+    color: $gray-text;
 }
