@@ -1,0 +1,114 @@
+.devices {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+
+  &__list {
+    display: flex;
+    gap: 32px;
+    margin: 24px 32px 0;
+    overflow: hidden;
+    flex-wrap: wrap;
+    max-height: 177px;
+    transition: max-height 0.4s ease;
+
+  }
+
+  &__list.show {
+    max-height: 1000px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #EAEAEA;
+    background-color: #FFFFFF;
+    width: 240px;
+    height: 160px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 16px;
+  }
+
+  &__name {
+    max-width: 100%;
+    height: auto;
+  }
+
+}
+
+.devices-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__wrapper {
+    margin-bottom: 16px;
+    display: flex; /* чтобы слайды шли в ряд */
+  }
+
+  &__slide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+    height: 72px; /* как у брендов */
+    flex-shrink: 0;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    margin: 16px;
+    padding: 16px;
+    transition: transform 0.2s;
+
+  }
+
+  &__name {
+    max-width: 100%;
+    height: auto;
+    font-family: "TT Lakes";
+    font-weight: 500;
+  }
+
+  &__icon {
+    width: 40px;
+  }
+
+  &__pagination {
+    position: static;
+    text-align: center;
+
+    .swiper-pagination-bullet {
+      background-color: #DDDDDD;
+      width: 12px;
+      height: 12px;
+      opacity: 1;
+      margin: 0 12px;
+      transition: all 0.3s;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: #B5B6BC;
+    }
+  }
+
+  .swiper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 100vh;
+    z-index: 10;
+    pointer-events: none;
+    background: linear-gradient(
+      270deg,
+      #F8F8F8 16.84%,
+      rgba(248, 248, 248, 0.0001) 100%
+    );
+  }
+}

@@ -48,18 +48,52 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     });
 
-    const toggleBtn = document.getElementById("toggleBtn");
-    const toggleText = toggleBtn.querySelector(".brands__toggle-text");
+    const toggleBrandsBtn = document.getElementById("toggleBrands");
     const brandsList = document.querySelector(".brands__list");
+    const brandsText = toggleBrandsBtn.querySelector(".toggle-text");
 
-    toggleBtn.addEventListener("click", () => {
+    toggleBrandsBtn.addEventListener("click", () => {
       brandsList.classList.toggle("show");
-      toggleBtn.classList.toggle("rotated");
-
-      toggleText.textContent = brandsList.classList.contains("show")
-        ? "Скрыть"
-        : "Показать ещё";
-
-      setTimeout(() => swiper.update(), 100);
+      toggleBrandsBtn.classList.toggle("rotated");
+      brandsText.textContent = brandsList.classList.contains("show") ? "Скрыть" : "Показать ещё";
     });
+});  
+
+    const toggleDevicesBtn = document.getElementById("toggleDevices");
+    const devicesList = document.querySelector(".devices__list");
+    const devicesText = toggleDevicesBtn.querySelector(".toggle-text");
+
+    toggleDevicesBtn.addEventListener("click", () => {
+      devicesList.classList.toggle("show");
+      toggleDevicesBtn.classList.toggle("rotated");
+      devicesText.textContent = devicesList.classList.contains("show") ? "Скрыть" : "Показать ещё";
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const devicesSwiper = new Swiper(".myDevicesSwiper", {
+    slidesPerView: "auto",
+    spaceBetween: 16,
+    pagination: {
+      el: ".devices-slider__pagination",
+      clickable: true,
+    },
   });
+});
+
+const swiper = new Swiper(".mySwiper", {
+  slidesPerView: "auto",
+  spaceBetween: 16,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 24,
+    },
+  },
+});

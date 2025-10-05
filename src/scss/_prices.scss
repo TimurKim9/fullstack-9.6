@@ -1,0 +1,79 @@
+.prices {
+  padding: 40px;
+  
+  &__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 16px;
+  table-layout: fixed;
+
+  thead {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    color: #8e8e8e;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: transparent;
+    margin-bottom: 8px; /* расстояние между head и body */
+  }
+
+  thead th {
+    text-align: left;
+    padding: 16px 24px;
+  }
+
+  tbody {
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    overflow: hidden; /* обрезает края при скруглении */
+    display: block;   /* делает тело отдельным визуальным блоком */
+  }
+
+  tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  tbody td {
+    border-bottom: 1px solid #f3f3f3;
+    padding: 16px 24px;
+    vertical-align: middle;
+  }
+
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* Чтобы колонки идеально совпадали */
+  th:nth-child(1),
+  td:nth-child(1) { width: 45%; }
+  th:nth-child(2),
+  td:nth-child(2) { width: 20%; }
+  th:nth-child(3),
+  td:nth-child(3) { width: 20%; }
+  th:nth-child(4),
+  td:nth-child(4) { width: 15%; text-align: right; }
+}
+
+
+  &__btn {
+    background: none;
+    border: none;
+    padding: 0;
+    padding: 8px 20px;
+    cursor: pointer;
+    width: 119px;
+  }
+
+  &__note {
+    font-size: 13px;
+    color: #666;
+    margin: 12px 0 8px;
+  }
+
+  &__link-btn {
+    cursor: pointer;
+  }
+}
