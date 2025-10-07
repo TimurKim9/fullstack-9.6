@@ -47,7 +47,7 @@
 
   &__wrapper {
     margin-bottom: 16px;
-    display: flex; /* чтобы слайды шли в ряд */
+    display: flex;
   }
 
   &__slide {
@@ -55,7 +55,7 @@
     justify-content: space-between;
     align-items: center;
     width: 240px;
-    height: 72px; /* как у брендов */
+    height: 72px; 
     flex-shrink: 0;
     border: 1px solid #EAEAEA;
     border-radius: 6px;

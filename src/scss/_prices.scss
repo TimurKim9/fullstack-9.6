@@ -15,7 +15,7 @@
     font-size: 14px;
     font-weight: 500;
     background-color: transparent;
-    margin-bottom: 8px; /* расстояние между head и body */
+    margin-bottom: 8px; 
   }
 
   thead th {
@@ -26,8 +26,8 @@
   tbody {
     background-color: #FFFFFF;
     border-radius: 6px;
-    overflow: hidden; /* обрезает края при скруглении */
-    display: block;   /* делает тело отдельным визуальным блоком */
+    overflow: hidden;
+    display: block;   
   }
 
   tbody tr {
@@ -46,7 +46,7 @@
     border-bottom: none;
   }
 
-  /* Чтобы колонки идеально совпадали */
+ 
   th:nth-child(1),
   td:nth-child(1) { width: 45%; }
   th:nth-child(2),

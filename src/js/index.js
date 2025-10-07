@@ -6,10 +6,10 @@ const buttons = document.querySelectorAll('.side-menu__item button');
 
 buttons.forEach(button => {
   button.addEventListener('click', () => {
-    // Сбрасываем класс active у всех кнопок
+   
     buttons.forEach(btn => btn.classList.remove('active'));
     
-    // Добавляем active только к нажатой кнопке
+    
     button.classList.add('active');
   });
 });
@@ -37,7 +37,7 @@ buttons.forEach(button => {
 //     : "Показать ещё";
 // });
 
-// Инициализация слайдера
+
 document.addEventListener("DOMContentLoaded", () => {
     const swiper = new Swiper(".mySwiper", {
       slidesPerView: "auto",
@@ -86,14 +86,5 @@ const swiper = new Swiper(".mySwiper", {
     el: ".swiper-pagination",
     clickable: true,
   },
-  breakpoints: {
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
-    1024: {
-      slidesPerView: 3,
-      spaceBetween: 24,
-    },
-  },
+
 });
