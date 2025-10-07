@@ -55,7 +55,7 @@
     justify-content: space-between;
     align-items: center;
     width: 240px;
-    height: 72px; 
+    height: 160px; 
     flex-shrink: 0;
     border: 1px solid #EAEAEA;
     border-radius: 6px;
@@ -76,6 +76,8 @@
 
   &__icon {
     width: 40px;
+    align-self: flex-end;
+    margin-top: 16px;
   }
 
   &__pagination {
