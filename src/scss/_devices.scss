@@ -54,7 +54,7 @@
 
   &__slide {
     display: flex;
-    flex-direction: column; /* ← иконка теперь под текстом */
+    flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     width: 240px;
@@ -81,8 +81,8 @@
   &__icon {
     width: 40px;
     height: 40px;
-    margin-top: auto; /* ← прижимает иконку вниз */
-    align-self: flex-end; /* иконка справа внизу */
+    margin-top: auto;
+    align-self: flex-end;
   }
 
   &__pagination {
