@@ -1,43 +1,45 @@
 .devices {
-  display: flex;
   flex-direction: column;
-  align-items: flex-start;
-
+  align-items: center;
 
   &__list {
     display: flex;
-    gap: 32px;
-    margin: 24px 32px 0;
-    overflow: hidden;
     flex-wrap: wrap;
-    max-height: 177px;
-    transition: max-height 0.4s ease;
-
-  }
-
-  &__list.show {
-    max-height: 1000px;
+    justify-content: center;
+    margin-bottom: 16px;
   }
 
   &__item {
+    position: relative;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid #EAEAEA;
-    background-color: #FFFFFF;
+    align-items: flex-start;
+    justify-content: flex-start;
     width: 240px;
     height: 160px;
     flex-shrink: 0;
+    border: 1px solid #EAEAEA;
     border-radius: 6px;
+    background-color: #FFFFFF;
     cursor: pointer;
+    margin: 16px;
     padding: 16px;
-  }
+    text-align: left;
 
-  &__name {
-    max-width: 100%;
-    height: auto;
-  }
+    .devices__name {
+      font-family: "TT Lakes";
+      font-weight: 500;
+      font-size: 16px;
+      color: #222;
+    }
 
+    .icon {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      width: 40px;
+      height: 40px;
+    }
+  }
 }
 
 .devices-slider {
@@ -52,10 +54,11 @@
 
   &__slide {
     display: flex;
+    flex-direction: column; /* ← иконка теперь под текстом */
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     width: 240px;
-    height: 160px; 
+    height: 160px;
     flex-shrink: 0;
     border: 1px solid #EAEAEA;
     border-radius: 6px;
@@ -69,15 +72,17 @@
 
   &__name {
     max-width: 100%;
-    height: auto;
     font-family: "TT Lakes";
     font-weight: 500;
+    font-size: 16px;
+    color: #222;
   }
 
   &__icon {
     width: 40px;
-    align-self: flex-end;
-    margin-top: 16px;
+    height: 40px;
+    margin-top: auto; /* ← прижимает иконку вниз */
+    align-self: flex-end; /* иконка справа внизу */
   }
 
   &__pagination {
@@ -107,10 +112,5 @@
     height: 100vh;
     z-index: 10;
     pointer-events: none;
-    background: linear-gradient(
-      270deg,
-      #F8F8F8 16.84%,
-      rgba(248, 248, 248, 0.0001) 100%
-    );
   }
 }
