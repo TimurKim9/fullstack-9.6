@@ -5,6 +5,13 @@ header {
     background-color: #FFFFFF;
     margin: 0;
     gap:16px;
+    align-items: center;
+}
+
+.header__v-line {
+  width: 2px;
+  height: 40px;
+  background-color: #EAEAEA; 
 }
 
 .header__menu-btn,

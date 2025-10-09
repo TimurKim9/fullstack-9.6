@@ -14,30 +14,6 @@ buttons.forEach(button => {
   });
 });
 
-// const swiper = new Swiper(".mySwiper", {
-//   slidesPerView: "auto",
-//   spaceBetween: 16,
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-// });
-
-
-// const toggleBtn = document.getElementById("toggleBtn");
-// const toggleText = toggleBtn.querySelector("span");
-// const hiddenBtns = document.querySelector(".servis");
-
-// toggleBtn.addEventListener("click", () => {
-//   hiddenBtns.classList.toggle("show");
-//   toggleBtn.classList.toggle("rotated");
-
-//   toggleText.textContent = hiddenBtns.classList.contains("show")
-//     ? "Скрыть"
-//     : "Показать ещё";
-// });
-
-
 document.addEventListener("DOMContentLoaded", () => {
     const swiper = new Swiper(".mySwiper", {
       slidesPerView: "auto",
@@ -59,14 +35,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });  
 
-    const toggleDevicesBtn = document.getElementById("toggleDevices");
-    const devicesList = document.querySelector(".devices__list");
-    const devicesText = toggleDevicesBtn.querySelector(".toggle-text");
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleDevicesBtn = document.getElementById("toggleDevices");
+  const devicesList = document.querySelector(".devices__list");
+  const devicesText = toggleDevicesBtn.querySelector(".toggle-text");
 
-    toggleDevicesBtn.addEventListener("click", () => {
-      devicesList.classList.toggle("show");
-      toggleDevicesBtn.classList.toggle("rotated");
-      devicesText.textContent = devicesList.classList.contains("show") ? "Скрыть" : "Показать ещё";
+  toggleDevicesBtn.addEventListener("click", () => {
+    devicesList.classList.toggle("show");
+    toggleDevicesBtn.classList.toggle("rotated");
+    devicesText.textContent = devicesList.classList.contains("show")
+      ? "Скрыть"
+      : "Показать ещё";
+  });
 });
 document.addEventListener("DOMContentLoaded", () => {
   const devicesSwiper = new Swiper(".myDevicesSwiper", {

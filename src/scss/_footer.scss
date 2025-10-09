@@ -1,0 +1,25 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    font-family: "TT Lakes";
+    font-weight: 500;
+    font-size: 14px;
+    color: #7E7E82;
+    flex-wrap: wrap;
+}
+
+.footer__copyright,
+.footer__privacy,
+.footer__disclaimer {
+    flex: 1;
+}
+
+.footer__privacy {
+    text-align: center;
+}
+
+.footer__disclaimer {
+    text-align: right;
+}

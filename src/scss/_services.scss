@@ -16,6 +16,18 @@
       margin-top: 24px;
       position: static;
     }
+    .swiper-pagination-bullet {
+      background-color: #DDDDDD;
+      width: 12px;
+      height: 12px;
+      opacity: 1;
+      margin: 0 12px;
+      transition: all 0.3s;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: #B5B6BC;
+    }
   }
 
   &__card {
@@ -42,13 +54,15 @@
   }
 
   &__title {
-    font-weight: 600;
+    font-family: "TT Lakes";
+    font-weight: 500;
     font-size: 14px;
     color: #777;
     margin-top: 6px;
   }
 
   &__text {
+    font-family: "TT Lakes";
     font-size: 16px;
     color: #222;
     font-weight: 500;
@@ -60,8 +74,9 @@
     border: none;
     cursor: pointer;
     margin-top: 16px;
-    // transition: transform 0.2s ease;
-
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
     }
     
   }
