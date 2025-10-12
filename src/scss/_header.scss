@@ -92,3 +92,14 @@ h1{
     padding-left: 20px ;
     
 }
+
+@media (max-width: 1119px){
+  .page-title__actions{
+    display: none;
+  }
+}
+@media (min-width: 1120px){
+  .header{
+    display: none;
+  }
+}

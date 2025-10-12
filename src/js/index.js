@@ -68,3 +68,50 @@ const swiper = new Swiper(".mySwiper", {
   },
 
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const menu = document.querySelector(".menu");
+  const openBtn = document.querySelector(".header__menu-btn"); // бургер в хедере
+  const backBtn = document.querySelector(".menu__btn--burger"); // кнопка внутри меню
+  const overlay = document.createElement("div");
+  overlay.classList.add("overlay");
+  document.body.appendChild(overlay);
+
+  // --- функции ---
+  const openMenu = () => {
+    menu.classList.remove("menu--hidden");
+    overlay.classList.add("overlay--visible");
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeMenu = () => {
+    menu.classList.add("menu--hidden");
+    overlay.classList.remove("overlay--visible");
+    document.body.style.overflow = "";
+  };
+
+  const toggleMenu = () => {
+    const hidden = menu.classList.contains("menu--hidden");
+    hidden ? openMenu() : closeMenu();
+  };
+
+  // --- события ---
+  if (openBtn) openBtn.addEventListener("click", toggleMenu);
+  if (backBtn) backBtn.addEventListener("click", closeMenu);
+  overlay.addEventListener("click", closeMenu);
+
+  // --- адаптация под экран ---
+  const handleResize = () => {
+    if (window.innerWidth >= 1024) {
+      menu.classList.remove("menu--hidden");
+      overlay.classList.remove("overlay--visible");
+      document.body.style.overflow = "";
+    } else {
+      menu.classList.add("menu--hidden");
+    }
+  };
+
+  handleResize();
+  window.addEventListener("resize", handleResize);
+});
+

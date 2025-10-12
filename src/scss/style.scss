@@ -38,8 +38,17 @@
 body {
     background-color: #F8F8F8;
     margin: 0;
+    overflow-x: hidden;
+}
+body {
+  margin: 0;
+  font-family: "TT Lakes";
+  
 }
 
+.main {
+  transition: margin-left 0.3s ease;
+}
 
 // header {
 //     display: flex;

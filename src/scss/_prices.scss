@@ -88,3 +88,12 @@
     cursor: pointer;
   }
 }
+
+@media (max-width: 767px){
+    .prices{
+      display: none;
+    }
+    .prices__titel{
+      display: none;
+    }
+}

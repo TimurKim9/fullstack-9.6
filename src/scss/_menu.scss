@@ -138,3 +138,98 @@
 .menu__lang-btn:focus {
   color: #7E7E82;
 }
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 100vh;
+  background-color: #FFFFFF;
+  // box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2);
+  overflow-y: auto;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.menu--hidden {
+  transform: translateX(-100%);
+}
+
+/* ====== ЗАТЕМНЕНИЕ ====== */
+.overlay {
+  position: fixed;
+  inset: 0;
+  // background: rgba(0,0,0,0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 900;
+}
+
+.overlay--visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ====== АДАПТИВ ====== */
+@media (max-width: 767px) {
+  .menu {
+    width: 100%;
+    max-width: none;
+    box-shadow: none;
+  }
+
+  .menu--hidden {
+    transform: translateX(-100%);
+  }
+
+  .menu__footer {
+    padding-bottom: 40px; /* можно чуть уменьшить отступ */
+  }
+
+  /* Можно добавить плавное появление */
+  .menu {
+    transition: transform 0.3s ease;
+  }
+}
+
+/* только на планшетах */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .overlay {
+    display: block;
+  }
+}
+
+/* на десктопе не показываем overlay */
+@media (min-width: 1024px) {
+  .overlay {
+    display: none;
+  }
+}
+@media (max-width: 1023px) {
+  .main {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu {
+    transform: translateX(0);
+  }
+  
+  .menu__btn--burger {
+    display: none;
+  }
+
+  .main {
+    margin-left: 320px; /* Контент отодвигается */
+  }
+
+  .overlay {
+    display: none; /* На ПК затемнение не нужно */
+  }
+
+  .header__menu-btn {
+    display: none; /* На ПК бургер не нужен */
+  }
+}

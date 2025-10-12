@@ -141,3 +141,14 @@
     pointer-events: none;
   }
 }
+
+@media (max-width: 767px){
+  .devices{
+    display: none;
+  }
+}
+@media (min-width: 767px){
+  .devices-slider{
+    display: none;
+  }
+}
