@@ -2,7 +2,7 @@
 
 header {
     display: flex;
-    background-color: #FFFFFF;
+    background-color: $white-back;
     margin: 0;
     gap:16px;
     align-items: center;
@@ -12,7 +12,7 @@ header {
 .header__v-line {
   width: 2px;
   height: 40px;
-  background-color: #EAEAEA; 
+  background-color: $border; 
 }
 
 .header__menu-btn,
@@ -87,7 +87,7 @@ h1{
     font-family: 'TT Lakes';
     font-weight: 700;
     font-style: normal;
-    color: #1B1C21;
+    color: $back-text;
     height: 40px;
     border-left: 4px solid $green-decor;
     padding-left: 20px ;

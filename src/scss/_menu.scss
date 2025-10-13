@@ -1,3 +1,5 @@
+@use 'vary.scss' as *;
+
 .menu__header {
   width: 100%;
   display: flex;
@@ -71,13 +73,12 @@
   top: 0;
   width: 4px;
   height: 100%;
-  background: #41F6D7;
+  background: $green-decor;
   border-radius: 2px;
 }
 
 .menu__link:hover {
-  color: #41F6D7;
-  transform: translateX(4px);
+  color: $green-decor;
 }
 
 /* ---------- FOOTER ---------- */
@@ -131,7 +132,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  color: #1B1C21;
+  color: $back-text;
   font-weight: 500;
   font-size: 16px;
   padding: 0;
@@ -147,7 +148,7 @@
   left: 0;
   width: 320px;
   height: 100vh;
-  background-color: #FFFFFF;
+  background-color: $white-back;
   // box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2);
   overflow-y: auto;
   z-index: 1000;

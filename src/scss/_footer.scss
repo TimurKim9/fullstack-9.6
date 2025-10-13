@@ -1,3 +1,5 @@
+@use 'vary.scss' as *;
+
 .footer {
     display: flex;
     justify-content: space-between;
@@ -6,7 +8,7 @@
     font-family: "TT Lakes";
     font-weight: 500;
     font-size: 14px;
-    color: #7E7E82;
+    color: $gray-text ;
     flex-wrap: wrap;
 }
 

@@ -1,3 +1,5 @@
+@use 'vary.scss' as *;
+
 .devices {
   display: flex;
   flex-direction: column;
@@ -27,9 +29,9 @@
     width: 240px;
     height: 160px;
     padding: 16px;
-    border: 1px solid #EAEAEA;
+    border: 1px solid $border;
     border-radius: 6px;
-    background-color: #FFFFFF;
+    background-color: $white-back;
     cursor: pointer;
     text-align: left;
   }
@@ -38,7 +40,7 @@
     font-family: "TT Lakes";
     font-weight: 500;
     font-size: 16px;
-    color: #222;
+    color: $back-text;
   }
 
   &__icon {
@@ -87,9 +89,9 @@
     width: 240px;
     height: 160px;
     flex-shrink: 0;
-    border: 1px solid #EAEAEA;
+    border: 1px solid $border;
     border-radius: 6px;
-    background-color: #FFFFFF;
+    background-color: $white-back;
     cursor: pointer;
     margin: 16px;
     padding: 16px;

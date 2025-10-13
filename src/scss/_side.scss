@@ -21,7 +21,7 @@
 .side-menu__btn {
     font-family:'TT Lakes';
     font-weight: 500;
-    background-color: #F8F8F8;
+    background-color: $gray-back;
     color: $gray-text;
     padding: 10px 15px;
     border: 2px solid transparent;
@@ -38,8 +38,8 @@
 
 
 .side-menu__btn.active {
-    border: 2px solid #B8FFEC;
-    background-color: #FFFFFF;
+    border: 2px solid $light_green-decor;
+    background-color: $white-back;
     color: $gray-text;
 }
 
@@ -52,4 +52,24 @@
         margin: 0;
         padding: 0;
     }
+}
+
+@media (max-width:1439px){
+.side-menu__list-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.side-menu__slide--start {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(
+    270deg,
+    #F8F8F8 16.84%,
+    rgba(248, 248, 248, 0.0001) 100%);
+}
 }

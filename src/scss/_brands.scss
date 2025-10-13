@@ -1,4 +1,4 @@
-
+@use 'vary.scss' as *;
 
 .brands {
   display: flex;
@@ -24,8 +24,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid #EAEAEA;
-    background-color: #FFFFFF;
+    border: 1px solid $border;
+    background-color: $white-back;
     width: 240px;
     height: 72px;
     flex-shrink: 0;
