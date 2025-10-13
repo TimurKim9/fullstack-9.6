@@ -6,6 +6,7 @@ header {
     margin: 0;
     gap:16px;
     align-items: center;
+    height: 88px;
 }
 
 .header__v-line {
@@ -92,13 +93,20 @@ h1{
     padding-left: 20px ;
     
 }
-
-@media (max-width: 1119px){
+@media (max-width:767px) {
+    .header__phone-btn,
+    .header__messenger-btn,
+    .header__profile-btn, 
+    .header__v-line--left{
+        display: none;
+    }
+}
+@media (max-width: 1439px){
   .page-title__actions{
     display: none;
   }
 }
-@media (min-width: 1120px){
+@media (min-width: 1439px){
   .header{
     display: none;
   }

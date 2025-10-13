@@ -15,7 +15,7 @@ buttons.forEach(button => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    const swiper = new Swiper(".mySwiper", {
+    const swiper = new Swiper(".myBrandsSwiper", {
       slidesPerView: "auto",
       spaceBetween: 16,
       pagination: {
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-const swiper = new Swiper(".mySwiper", {
+const swiper = new Swiper(".myServicesSwiper", {
   slidesPerView: "auto",
   spaceBetween: 16,
   pagination: {
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // --- адаптация под экран ---
   const handleResize = () => {
-    if (window.innerWidth >= 1024) {
+    if (window.innerWidth >= 1439) {
       menu.classList.remove("menu--hidden");
       overlay.classList.remove("overlay--visible");
       document.body.style.overflow = "";

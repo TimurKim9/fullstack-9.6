@@ -3,6 +3,8 @@
   display: flex;
   align-items: center;
   margin-top: 16px;
+  gap: 6px;
+  height: 60px;
 }
 
 .menu__btn {
@@ -19,7 +21,7 @@
 
 .menu__logo {
   width: 67px;
-  margin-left: 26px;
+  margin-left: 22px;
 }
 
 .menu__btn--search {
@@ -30,11 +32,12 @@
 /* ---------- NAV ---------- */
 .menu__nav {
   display: grid;
+  flex: 1;
 }
 
 .menu__list {
   list-style: none;
-  margin: 50px 0 0 0;
+  margin: 30px 0 0 0;
   padding: 0;
 }
 
@@ -79,8 +82,8 @@
 
 /* ---------- FOOTER ---------- */
 .menu__footer {
-  margin-top: auto;
-  padding: 0 24px 150px 24px;
+  margin-top: auto; /* ← прижимает футер к низу */
+  padding: 0 24px 32px 24px;
 }
 
 .menu__contacts {
@@ -149,6 +152,8 @@
   overflow-y: auto;
   z-index: 1000;
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .menu--hidden {
@@ -159,7 +164,7 @@
 .overlay {
   position: fixed;
   inset: 0;
-  // background: rgba(0,0,0,0.4);
+  background: rgba(255, 255, 255, 0.85);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease;
@@ -194,25 +199,30 @@
 }
 
 /* только на планшетах */
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1439px) {
   .overlay {
     display: block;
   }
+
+  .menu:not(.menu--hidden) {
+    box-shadow: 16px 0px 52px 0px #0E185033;
+  }
 }
 
+
 /* на десктопе не показываем overlay */
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
   .overlay {
     display: none;
   }
 }
-@media (max-width: 1023px) {
+@media (max-width: 1439px) {
   .main {
     margin-left: 0;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
   .menu {
     transform: translateX(0);
   }

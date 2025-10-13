@@ -4,6 +4,7 @@
     max-height: 8em;
     overflow: hidden;
     transition: max-height 0.4s ease;
+    margin: 24px;
 }
 
 
@@ -51,4 +52,51 @@ br {
     font-style: normal;
     text-decoration: none;
     color:#1B1C21;
+}
+.content__img {
+    width: 320px;
+    height: auto;
+}
+
+@media (min-width:768px){
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px; /* расстояние между текстом и фото */
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .content__text {
+        max-height: 10em;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+    }
+
+    .content__text-block {
+        flex: 1;
+        max-width: 490px; /* ограничим ширину текста */
+    }
+
+    .content__picture {
+        display: flex;
+        align-items: center;
+        margin-right: 24px;
+    }
+
+    .content__img {
+        width: 531px;
+        height: auto;
+        border-radius: 10px; /* по желанию */
+    }
+}
+
+@media (min-width:768px) and (max-width:1439px) {
+    .content__img {
+        width: 360px;
+        height: auto;
+        border-radius: 10px;
+    }
 }
