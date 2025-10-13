@@ -14,59 +14,155 @@ buttons.forEach(button => {
   });
 });
 
+// document.addEventListener("DOMContentLoaded", () => {
+//     const swiper = new Swiper(".myBrandsSwiper", {
+//       slidesPerView: "auto",
+//       spaceBetween: 16,
+//       pagination: {
+//         el: ".brands-slider__pagination",
+//         clickable: true,
+//       },
+//     });
+
+//     const toggleBrandsBtn = document.getElementById("toggleBrands");
+//     const brandsList = document.querySelector(".brands__list");
+//     const brandsText = toggleBrandsBtn.querySelector(".toggle-text");
+
+//     toggleBrandsBtn.addEventListener("click", () => {
+//       brandsList.classList.toggle("show");
+//       toggleBrandsBtn.classList.toggle("rotated");
+//       brandsText.textContent = brandsList.classList.contains("show") ? "Скрыть" : "Показать ещё";
+//     });
+// });  
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const toggleDevicesBtn = document.getElementById("toggleDevices");
+//   const devicesList = document.querySelector(".devices__list");
+//   const devicesText = toggleDevicesBtn.querySelector(".toggle-text");
+
+//   toggleDevicesBtn.addEventListener("click", () => {
+//     devicesList.classList.toggle("show");
+//     toggleDevicesBtn.classList.toggle("rotated");
+//     devicesText.textContent = devicesList.classList.contains("show")
+//       ? "Скрыть"
+//       : "Показать ещё";
+//   });
+// });
+// document.addEventListener("DOMContentLoaded", () => {
+//   const devicesSwiper = new Swiper(".myDevicesSwiper", {
+//     slidesPerView: "auto",
+//     spaceBetween: 16,
+//     pagination: {
+//       el: ".devices-slider__pagination",
+//       clickable: true,
+//     },
+//   });
+// });
+
+// const swiper = new Swiper(".myServicesSwiper", {
+//   slidesPerView: "auto",
+//   spaceBetween: 16,
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//   },
+
+// });
+
 document.addEventListener("DOMContentLoaded", () => {
-    const swiper = new Swiper(".myBrandsSwiper", {
-      slidesPerView: "auto",
-      spaceBetween: 16,
-      pagination: {
-        el: ".brands-slider__pagination",
-        clickable: true,
-      },
-    });
+  let brandsSwiper;
+  let devicesSwiper;
+  let servicesSwiper;
 
-    const toggleBrandsBtn = document.getElementById("toggleBrands");
-    const brandsList = document.querySelector(".brands__list");
-    const brandsText = toggleBrandsBtn.querySelector(".toggle-text");
+  function initSwipers() {
+    if (window.innerWidth < 768) {
+      // === БРЕНДЫ ===
+      if (!brandsSwiper) {
+        brandsSwiper = new Swiper(".myBrandsSwiper", {
+          slidesPerView: "auto",
+          spaceBetween: 16,
+          pagination: {
+            el: ".brands-slider__pagination",
+            clickable: true,
+          },
+        });
+      }
 
+      // === УСТРОЙСТВА ===
+      if (!devicesSwiper) {
+        devicesSwiper = new Swiper(".myDevicesSwiper", {
+          slidesPerView: "auto",
+          spaceBetween: 16,
+          pagination: {
+            el: ".devices-slider__pagination",
+            clickable: true,
+          },
+        });
+      }
+
+      // === СЕРВИСЫ ===
+      if (!servicesSwiper) {
+        servicesSwiper = new Swiper(".myServicesSwiper", {
+          slidesPerView: "auto",
+          spaceBetween: 16,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+      }
+    } else {
+      // Уничтожаем свайперы, если экран ≥ 768px
+      if (brandsSwiper) {
+        brandsSwiper.destroy(true, true);
+        brandsSwiper = null;
+      }
+      if (devicesSwiper) {
+        devicesSwiper.destroy(true, true);
+        devicesSwiper = null;
+      }
+      if (servicesSwiper) {
+        servicesSwiper.destroy(true, true);
+        servicesSwiper = null;
+      }
+    }
+  }
+
+  // Инициализация при загрузке
+  initSwipers();
+
+  // Перепроверка при изменении размера экрана
+  window.addEventListener("resize", initSwipers);
+
+  // === КНОПКА "ПОКАЗАТЬ ЕЩЁ" ДЛЯ БРЕНДОВ ===
+  const toggleBrandsBtn = document.getElementById("toggleBrands");
+  const brandsList = document.querySelector(".brands__list");
+  const brandsText = toggleBrandsBtn?.querySelector(".toggle-text");
+
+  if (toggleBrandsBtn) {
     toggleBrandsBtn.addEventListener("click", () => {
       brandsList.classList.toggle("show");
       toggleBrandsBtn.classList.toggle("rotated");
-      brandsText.textContent = brandsList.classList.contains("show") ? "Скрыть" : "Показать ещё";
+      brandsText.textContent = brandsList.classList.contains("show")
+        ? "Скрыть"
+        : "Показать ещё";
     });
-});  
+  }
 
-document.addEventListener("DOMContentLoaded", () => {
+  // === КНОПКА "ПОКАЗАТЬ ЕЩЁ" ДЛЯ УСТРОЙСТВ ===
   const toggleDevicesBtn = document.getElementById("toggleDevices");
   const devicesList = document.querySelector(".devices__list");
-  const devicesText = toggleDevicesBtn.querySelector(".toggle-text");
+  const devicesText = toggleDevicesBtn?.querySelector(".toggle-text");
 
-  toggleDevicesBtn.addEventListener("click", () => {
-    devicesList.classList.toggle("show");
-    toggleDevicesBtn.classList.toggle("rotated");
-    devicesText.textContent = devicesList.classList.contains("show")
-      ? "Скрыть"
-      : "Показать ещё";
-  });
-});
-document.addEventListener("DOMContentLoaded", () => {
-  const devicesSwiper = new Swiper(".myDevicesSwiper", {
-    slidesPerView: "auto",
-    spaceBetween: 16,
-    pagination: {
-      el: ".devices-slider__pagination",
-      clickable: true,
-    },
-  });
-});
-
-const swiper = new Swiper(".myServicesSwiper", {
-  slidesPerView: "auto",
-  spaceBetween: 16,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-
+  if (toggleDevicesBtn) {
+    toggleDevicesBtn.addEventListener("click", () => {
+      devicesList.classList.toggle("show");
+      toggleDevicesBtn.classList.toggle("rotated");
+      devicesText.textContent = devicesList.classList.contains("show")
+        ? "Скрыть"
+        : "Показать ещё";
+    });
+  }
 });
 
 document.addEventListener("DOMContentLoaded", () => {
