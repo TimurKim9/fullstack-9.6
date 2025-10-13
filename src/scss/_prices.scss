@@ -1,78 +1,162 @@
 @use 'vary.scss' as *;
 
-.prices {
-  padding: 40px;
+// .prices {
+//   padding: 40px;
   
-  &__table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 16px;
-  table-layout: fixed;
+//   &__table {
+//   width: 100%;
+//   border-collapse: collapse;
+//   margin-bottom: 16px;
+//   table-layout: fixed;
 
-  thead {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
-    color: #8e8e8e;
-    background-color: transparent;
-    margin-bottom: 8px;
-  }
+//   thead {
+//     display: table;
+//     width: 100%;
+//     table-layout: fixed;
+//     color: #8e8e8e;
+//     background-color: transparent;
+//     margin-bottom: 8px;
+//   }
 
-  thead th {
-    font-family: "TT Lakes";
-    font-weight: 500;
-    font-size: 14px;
-    text-align: left;
-    padding: 16px 24px;
-  }
+//   thead th {
+//     font-family: "TT Lakes";
+//     font-weight: 500;
+//     font-size: 14px;
+//     text-align: left;
+//     padding: 16px 24px;
+//   }
 
-  tbody {
-    background-color: #FFFFFF;
-    border-radius: 6px;
-    overflow: hidden;
-    display: block;   
-  }
+//   tbody {
+//     background-color: #FFFFFF;
+//     border-radius: 6px;
+//     overflow: hidden;
+//     display: block;   
+//   }
 
-  tbody tr {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
-    height: 64px;
-  }
+//   tbody tr {
+//     display: table;
+//     width: 100%;
+//     table-layout: fixed;
+//     height: 64px;
+//   }
 
-  tbody td {
-    font-family: "TT Lakes";
-    font-weight: 400;
-    font-size: 14px;
-    border-bottom: 1px solid $border;
-    padding: 16px 24px;
-    vertical-align: middle;
-  }
+//   tbody td {
+//     font-family: "TT Lakes";
+//     font-weight: 400;
+//     font-size: 14px;
+//     border-bottom: 1px solid $border;
+//     padding: 16px 24px;
+//     vertical-align: middle;
+//   }
 
-  tbody tr:last-child td {
-    border-bottom: none;
-  }
+//   tbody tr:last-child td {
+//     border-bottom: none;
+//   }
 
  
-  th:nth-child(1),
-  td:nth-child(1) { width: 45%; }
-  th:nth-child(2),
-  td:nth-child(2) { width: 20%; }
-  th:nth-child(3),
-  td:nth-child(3) { width: 20%; }
-  th:nth-child(4),
-  td:nth-child(4) { width: 15%; text-align: right; }
+//   th:nth-child(1),
+//   td:nth-child(1) { width: 45%; }
+//   th:nth-child(2),
+//   td:nth-child(2) { width: 20%; }
+//   th:nth-child(3),
+//   td:nth-child(3) { width: 20%; }
+//   th:nth-child(4),
+//   td:nth-child(4) { width: 15%; text-align: right; }
+// }
+
+
+//   &__btn {
+//     background: none;
+//     border: none;
+//     padding: 0;
+//     padding: 8px 10px;
+//     cursor: pointer;
+//     width: 119px;
+//   }
+.prices {
+  padding: 40px;
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 16px;
+    table-layout: fixed;
+    overflow-x: auto; // горизонтальный скролл при маленьких экранах
+    display: block;
+
+    thead {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+      color: #8e8e8e;
+      background-color: transparent;
+    }
+
+    thead th {
+      font-family: "TT Lakes";
+      font-weight: 500;
+      font-size: 14px;
+      text-align: left;
+      padding-left: 16px ;
+      white-space: nowrap; // предотвращает перенос текста
+      height: 50px;
+    }
+
+    tbody {
+      display: block;
+      width: 100%;
+      background-color: #fff;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    tbody tr {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+      height: 64px;
+    }
+
+    tbody td {
+      font-family: "TT Lakes";
+      font-weight: 400;
+      font-size: 14px;
+      border-bottom: 1px solid $border;
+      padding-left: 16px ;
+      vertical-align: middle;
+      white-space: nowrap; // чтобы текст не переносился
+      overflow: hidden;
+      text-overflow: ellipsis; // если не помещается — "..."
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+
+  th:nth-child(1),td:nth-child(1) { width: 35%; }
+  th:nth-child(2),td:nth-child(2) { width: 25%; }
+  th:nth-child(3),td:nth-child(3) { width: 25%; }
+  th:nth-child(4),td:nth-child(4) { width: 15%; text-align: right; }
 }
 
+    tbody td:last-child {
+  text-align: right; 
+  padding-right: 8px; 
+}
 
-  &__btn {
-    background: none;
-    border: none;
-    padding: 0;
-    padding: 8px 10px;
-    cursor: pointer;
-    width: 119px;
-  }
+.prices__btn {
+  background: none;
+  border: none;
+  padding: 6px 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto; 
+  min-width: 32px; 
+  flex-shrink: 0; 
+}
 
   &__note {
     max-width: 421px;
@@ -101,4 +185,18 @@
     .prices__titel {
       display: none;
     }
+  }
+@media (min-width: 768px) {
+  .prices {
+    padding: 12px;
+
+    &__table {
+      font-size: 12px;
+
+      th:nth-child(1), td:nth-child(1) { width: 30%; min-width: 50px; }
+      th:nth-child(2), td:nth-child(2) { width: 5%; min-width: 20px; }
+      th:nth-child(3), td:nth-child(3) { width: 7%; min-width: 30px; }
+      th:nth-child(4), td:nth-child(4) { width: 10%; min-width: 32px; text-align: right; }
+    }
+  }
 }
