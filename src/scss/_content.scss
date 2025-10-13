@@ -65,7 +65,7 @@ br {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        gap: 20px; /* расстояние между текстом и фото */
+        gap: 20px;
         margin: 0 auto;
         padding: 20px;
     }
@@ -78,7 +78,7 @@ br {
 
     .content__text-block {
         flex: 1;
-        max-width: 490px; /* ограничим ширину текста */
+        max-width: 490px; 
     }
 
     .content__picture {
@@ -90,7 +90,7 @@ br {
     .content__img {
         width: 531px;
         height: auto;
-        border-radius: 10px; /* по желанию */
+        border-radius: 10px; 
     }
 }
 

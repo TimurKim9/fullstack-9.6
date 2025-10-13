@@ -14,60 +14,6 @@ buttons.forEach(button => {
   });
 });
 
-// document.addEventListener("DOMContentLoaded", () => {
-//     const swiper = new Swiper(".myBrandsSwiper", {
-//       slidesPerView: "auto",
-//       spaceBetween: 16,
-//       pagination: {
-//         el: ".brands-slider__pagination",
-//         clickable: true,
-//       },
-//     });
-
-//     const toggleBrandsBtn = document.getElementById("toggleBrands");
-//     const brandsList = document.querySelector(".brands__list");
-//     const brandsText = toggleBrandsBtn.querySelector(".toggle-text");
-
-//     toggleBrandsBtn.addEventListener("click", () => {
-//       brandsList.classList.toggle("show");
-//       toggleBrandsBtn.classList.toggle("rotated");
-//       brandsText.textContent = brandsList.classList.contains("show") ? "Скрыть" : "Показать ещё";
-//     });
-// });  
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   const toggleDevicesBtn = document.getElementById("toggleDevices");
-//   const devicesList = document.querySelector(".devices__list");
-//   const devicesText = toggleDevicesBtn.querySelector(".toggle-text");
-
-//   toggleDevicesBtn.addEventListener("click", () => {
-//     devicesList.classList.toggle("show");
-//     toggleDevicesBtn.classList.toggle("rotated");
-//     devicesText.textContent = devicesList.classList.contains("show")
-//       ? "Скрыть"
-//       : "Показать ещё";
-//   });
-// });
-// document.addEventListener("DOMContentLoaded", () => {
-//   const devicesSwiper = new Swiper(".myDevicesSwiper", {
-//     slidesPerView: "auto",
-//     spaceBetween: 16,
-//     pagination: {
-//       el: ".devices-slider__pagination",
-//       clickable: true,
-//     },
-//   });
-// });
-
-// const swiper = new Swiper(".myServicesSwiper", {
-//   slidesPerView: "auto",
-//   spaceBetween: 16,
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-
-// });
 
 document.addEventListener("DOMContentLoaded", () => {
   let brandsSwiper;
@@ -76,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function initSwipers() {
     if (window.innerWidth < 768) {
-      // === БРЕНДЫ ===
+      
       if (!brandsSwiper) {
         brandsSwiper = new Swiper(".myBrandsSwiper", {
           slidesPerView: "auto",
@@ -88,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
 
-      // === УСТРОЙСТВА ===
       if (!devicesSwiper) {
         devicesSwiper = new Swiper(".myDevicesSwiper", {
           slidesPerView: "auto",
@@ -100,7 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
 
-      // === СЕРВИСЫ ===
       if (!servicesSwiper) {
         servicesSwiper = new Swiper(".myServicesSwiper", {
           slidesPerView: "auto",
@@ -112,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
     } else {
-      // Уничтожаем свайперы, если экран ≥ 768px
+   
       if (brandsSwiper) {
         brandsSwiper.destroy(true, true);
         brandsSwiper = null;
@@ -128,13 +72,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Инициализация при загрузке
   initSwipers();
 
-  // Перепроверка при изменении размера экрана
   window.addEventListener("resize", initSwipers);
 
-  // === КНОПКА "ПОКАЗАТЬ ЕЩЁ" ДЛЯ БРЕНДОВ ===
   const toggleBrandsBtn = document.getElementById("toggleBrands");
   const brandsList = document.querySelector(".brands__list");
   const brandsText = toggleBrandsBtn?.querySelector(".toggle-text");
@@ -149,7 +90,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // === КНОПКА "ПОКАЗАТЬ ЕЩЁ" ДЛЯ УСТРОЙСТВ ===
   const toggleDevicesBtn = document.getElementById("toggleDevices");
   const devicesList = document.querySelector(".devices__list");
   const devicesText = toggleDevicesBtn?.querySelector(".toggle-text");
@@ -167,13 +107,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const menu = document.querySelector(".menu");
-  const openBtn = document.querySelector(".header__menu-btn"); // бургер в хедере
-  const backBtn = document.querySelector(".menu__btn--burger"); // кнопка внутри меню
+  const openBtn = document.querySelector(".header__menu-btn");
+  const backBtn = document.querySelector(".menu__btn--burger"); 
   const overlay = document.createElement("div");
   overlay.classList.add("overlay");
   document.body.appendChild(overlay);
 
-  // --- функции ---
   const openMenu = () => {
     menu.classList.remove("menu--hidden");
     overlay.classList.add("overlay--visible");
@@ -191,12 +130,10 @@ document.addEventListener("DOMContentLoaded", () => {
     hidden ? openMenu() : closeMenu();
   };
 
-  // --- события ---
   if (openBtn) openBtn.addEventListener("click", toggleMenu);
   if (backBtn) backBtn.addEventListener("click", closeMenu);
   overlay.addEventListener("click", closeMenu);
 
-  // --- адаптация под экран ---
   const handleResize = () => {
     if (window.innerWidth >= 1439) {
       menu.classList.remove("menu--hidden");

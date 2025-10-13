@@ -5,6 +5,10 @@
   background-color: $gray-back;
   text-align: center;
 
+  &__title{
+    padding: 16px 16px 16px 22px;
+  }
+
   &__slider {
     width: 100%;
     max-width: 1200px;
@@ -12,6 +16,7 @@
 
     .swiper-wrapper {
       display: flex;
+      margin-top: 25px;
     }
 
     .swiper-pagination {
@@ -82,6 +87,27 @@
     }
     
   }
+
+.services-slider {
+  position: relative;
+  overflow: hidden; 
+}
+
+
+.services-slider__fade {
+  position: absolute;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  pointer-events: none; 
+  z-index: 5;
+}
+
+.services-slider__fade--right {
+  right: 0;
+  background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+
+}
 
  @media (min-width: 767px){
     .services{

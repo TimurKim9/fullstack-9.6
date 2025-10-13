@@ -46,8 +46,8 @@
 @media (min-width:1440px){
     .side-menu__list {
         display: flex;
-        flex-wrap: wrap; /* разрешает перенос элементов */
-        overflow: hidden; /* убирает скролл */
+        flex-wrap: wrap; 
+        overflow: hidden; 
         list-style: none;
         margin: 0;
         padding: 0;

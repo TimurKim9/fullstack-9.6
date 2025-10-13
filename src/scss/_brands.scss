@@ -51,7 +51,7 @@
 
 
   &__wrapper {
-    margin-bottom: 16px;
+    margin-bottom: 16px;  
   }
 
   &__slide {
@@ -106,12 +106,27 @@
     height: 100vh;
     z-index: 10;
     pointer-events: none;
-    background: linear-gradient(
-      270deg,
-      #F8F8F8 16.84%,
-      rgba(248, 248, 248, 0.0001) 100%
-    );
   }
+}
+
+.brands-slider {
+  position: relative;
+  overflow: hidden; 
+}
+
+.brands-slider__fade {
+  position: absolute;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  pointer-events: none; 
+  z-index: 5;
+}
+
+.brands-slider__fade--right {
+  right: 0;
+  background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+
 }
 
 @media (max-width: 767px){

@@ -190,16 +190,14 @@
   }
 
   .menu__footer {
-    padding-bottom: 40px; /* можно чуть уменьшить отступ */
+    padding-bottom: 40px; 
   }
 
-  /* Можно добавить плавное появление */
   .menu {
     transition: transform 0.3s ease;
   }
 }
 
-/* только на планшетах */
 @media (min-width: 768px) and (max-width: 1439px) {
   .overlay {
     display: block;
@@ -210,8 +208,6 @@
   }
 }
 
-
-/* на десктопе не показываем overlay */
 @media (min-width: 1440px) {
   .overlay {
     display: none;
@@ -233,14 +229,14 @@
   }
 
   .main {
-    margin-left: 320px; /* Контент отодвигается */
+    margin-left: 320px; 
   }
 
   .overlay {
-    display: none; /* На ПК затемнение не нужно */
+    display: none; 
   }
 
   .header__menu-btn {
-    display: none; /* На ПК бургер не нужен */
+    display: none; 
   }
 }
