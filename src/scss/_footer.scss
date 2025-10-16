@@ -25,3 +25,15 @@
 .footer__disclaimer {
     text-align: right;
 }
+
+@media (max-width: 767px){
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .footer__disclaimer {
+    text-align: center;
+  }
+}

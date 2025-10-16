@@ -45,7 +45,6 @@ br {
     transition: transform 0.3s ease;
 }
 
-
 .content__paragraph {
     font-family: 'TT Lakes';
     font-weight: 400;
@@ -54,6 +53,7 @@ br {
     text-decoration: none;
     color:$back-text;
 }
+
 .content__img {
     width: 320px;
     height: auto;
@@ -71,7 +71,7 @@ br {
     }
 
     .content__text {
-        max-height: 10em;
+        max-height: 11em;
         overflow: hidden;
         transition: max-height 0.4s ease;
     }
@@ -92,6 +92,13 @@ br {
         height: auto;
         border-radius: 10px; 
     }
+}
+
+@media(max-width:767px) {
+    .content__img {
+        width: 100%;
+        height: auto;
+    }    
 }
 
 @media (min-width:768px) and (max-width:1439px) {

@@ -141,6 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.style.overflow = "";
     } else {
       menu.classList.add("menu--hidden");
+      overlay.classList.remove("overlay--visible");
     }
   };
 
