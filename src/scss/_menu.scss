@@ -31,7 +31,6 @@
   margin-right: 24px;
 }
 
-/* ---------- NAV ---------- */
 .menu__nav {
   display: grid;
   flex: 1;
@@ -81,9 +80,8 @@
   color: $green-decor;
 }
 
-/* ---------- FOOTER ---------- */
 .menu__footer {
-  margin-top: auto; /* ← прижимает футер к низу */
+  margin-top: auto;
   padding: 0 24px 32px 24px;
 }
 
